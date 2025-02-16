@@ -1,33 +1,27 @@
 pipeline {
     agent any
-    stages{
-        stage('Clone') {
+    stages {  
+        stage('Check Out') { 
             steps {
-                print "clone docker"
+                print 'Check Out'
                 checkout([
-                    $class: 'GitSCM', 
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [ [ 
-                    credentialsId: 'Thanakrit', 
-                    url: 'https://github.com/ThanakritKhn/csi403lab.git'
-            ] ]
-            ])
-            print "Clone Success"
+                $class: 'GitSCM', 
+                branches: [[name: '*/main']], 
+                userRemoteConfigs: [ [ 
+                credentialsId: 'admin', 
+                url: "https://github.com/ThanakritKhn/csi403lab.git"
+                ] ]
+                ])
             }
         }
-        stage('Build') {
+        stage('Build') { 
             steps {
-                print "build docker"
-        }
-        }
-        stage('Deploy Image') {
-            steps {
-                print "deploy image"
+                print 'Building and Deploying'
             }
         }
-        stage('Testing') {
+        stage('test') {
             steps {
-                print "testing"
+                print 'Testing'
             }
         }
     }
