@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containers-1 {
+    width: 1490px;
+    height: fit-content;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contents {
+    width: 400px;
+    margin: 20px;
+    height: fit-content;
+}
+
+.input {
+    margin-bottom: 10px;
+
+}
+
+.submit {
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.cal {
+    display: block;
+    width: 300px;
+}
+
+.del {
+    display: block;
+    width: 94px;
+    margin-left: 6px;
+}
+
+.show {
+    min-height: 100px;
+}
